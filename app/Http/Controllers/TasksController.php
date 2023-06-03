@@ -49,7 +49,7 @@ class TasksController extends Controller
     {
         $request->validate([
             'status' => 'required|max:10',
-            'content' => 'required|max:255',
+            'content' => 'required',
         ]);
         
         // タスクを作成
@@ -108,7 +108,7 @@ class TasksController extends Controller
     {
         $request->validate([
             'status' => 'required|max:10',
-            'content' => 'required|max:255',
+            'content' => 'required',
         ]);
         // idの値でタスクを検索して取得
         $task = Task::findOrFail($id);
