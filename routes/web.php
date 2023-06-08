@@ -23,3 +23,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::resource('tasks', TasksController::class, ['only' => ['show', 'edit', 'delete']]);
+});    
