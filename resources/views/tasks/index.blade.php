@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="prose ml-4">
-        <h2>タスク 一覧</h2>
+    <h2>タスク 一覧</h2>
     </div>
 
     @if (isset($tasks))
